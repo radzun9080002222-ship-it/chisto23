@@ -156,6 +156,7 @@ footer{padding:48px 0 0}
 .copy{border-top:1px solid rgba(0,0,0,.05);padding:20px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(46,52,56,.4)}
 .note{position:fixed;left:16px;bottom:16px;z-index:60;background:var(--gr);color:#fff;font-size:12px;border-radius:12px;padding:10px 16px;opacity:.92}
 .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:10px}
+nav .m-cta{display:none}
 .burger span{display:block;height:2px;width:100%;background:var(--gr);border-radius:2px;transition:.25s}
 body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 body.menu-open .burger span:nth-child(2){opacity:0}
@@ -166,7 +167,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45de
 nav{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;box-shadow:0 20px 40px -20px rgba(34,39,43,.25);flex-direction:column;gap:0;padding:12px 32px 24px}
 body.menu-open nav{display:flex}
 nav a{padding:14px 0;font-size:16px;border-bottom:1px solid rgba(0,0,0,.06)}
-nav .m-cta{margin-top:18px;background:var(--em);color:#fff;text-align:center;border-radius:999px;padding:14px;font-weight:600;border-bottom:none}
+nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-align:center;border-radius:999px;padding:14px;font-weight:600;border-bottom:none}
 .hero .cx,.calc .cx,.trust .cx,.faq .cx{grid-template-columns:1fr}
 .hero h1{font-size:72px}
 .man-grid,.case-grid,.rent-grid{grid-template-columns:1fr}
@@ -411,4 +412,4 @@ const cg = document.getElementById("caseGrid");
 CASES.forEach(c=>{
   const el = document.createElement("article");
   el.className = "case";
-  el.innerHTML = `<div class="ba"><img src="${c.a}" alt="${c.t} — после"><img class="bimg" src="${c.b}" alt="${c.t} — до" style="clip-path:inset(0 50% 0 0)"><div class="line" style="left:50%"></div><div class="knob" style="left:50%">⇄</div><input type="range" min="0" max="100" val
+  el.innerHTML = `<div class="ba"><img src="${c.a}" alt="${c.t} — после"><img class="bimg" src="${c.b}" alt="${c.t} — до" style="clip-path:inset(0 50% 0 0)"><div class="line" style="left:50%"></div><div class="knob" style="left:50%">⇄</div><i
