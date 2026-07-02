@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-ink bg-white antialiased;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
+  }
+  .kicker {
+    @apply text-xs font-semibold uppercase tracking-widest2 text-emerald;
+  }
+  .h-section {
+    @apply mt-3 text-2xl font-semibold uppercase tracking-[0.12em] text-graphite md:text-4xl;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-emerald px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald/25 transition hover:bg-emerald-dark;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-graphite transition hover:text-emerald;
+  }
+}
