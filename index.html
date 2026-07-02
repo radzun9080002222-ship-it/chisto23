@@ -154,7 +154,6 @@ footer{padding:48px 0 0}
 .f-ct .tel{font-weight:700;color:var(--gr)}
 .slogan{font-family:'Caveat',cursive;font-size:26px;color:var(--em);margin-top:16px}
 .copy{border-top:1px solid rgba(0,0,0,.05);padding:20px 0;display:flex;justify-content:space-between;font-size:12px;color:rgba(46,52,56,.4)}
-.note{position:fixed;left:16px;bottom:16px;z-index:60;background:var(--gr);color:#fff;font-size:12px;border-radius:12px;padding:10px 16px;opacity:.92}
 .burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;padding:10px}
 nav .m-cta{display:none}
 .burger span{display:block;height:2px;width:100%;background:var(--gr);border-radius:2px;transition:.25s}
@@ -369,7 +368,6 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
   <div class="cx copy"><span>© 2026 Вершина. Профессиональный клининг.</span><a href="#" style="color:inherit;text-decoration:none">Политика конфиденциальности</a></div>
 </footer>
 
-
 <script>
 const TARIFFS = {
   regular:{name:"Влажная уборка",rate:110,min:4500,dur:"2–4 часа",tag:"Дом снова дышит. Идеально для поддержания порядка раз в 1–2 недели.",n:"01",pr:"от 110 ₽/м²",list:["Пылесос всех полов и ковров","Влажная уборка полов","Двери, ручки, плинтусы","Пыль со всех открытых поверхностей","Кухня: фасады, фартук, техника снаружи","Мойка и смесители до блеска","Зеркала и стеклянные поверхности","Санузел: сантехника, плитка, пол","Вынос мусора, замена пакетов"]},
@@ -411,4 +409,37 @@ const cg = document.getElementById("caseGrid");
 CASES.forEach(c=>{
   const el = document.createElement("article");
   el.className = "case";
-  el.innerHTML = `<div class="ba"><img src="${c.a}" alt="${c.t} — после"><img class="bimg" src="${c.b}" alt="${c.t} — до" style="clip-path:inset(0 50% 0 0)"><div class="line" style="left:50%"></div><div class="knob" style="left:50%">⇄</div><i
+  el.innerHTML = `<div class="ba"><img src="${c.a}" alt="${c.t} — после"><img class="bimg" src="${c.b}" alt="${c.t} — до" style="clip-path:inset(0 50% 0 0)"><div class="line" style="left:50%"></div><div class="knob" style="left:50%">⇄</div><input type="range" min="0" max="100" value="50" aria-label="Сравнить до и после"><span class="tag b">до</span><span class="tag a">после</span></div><h3>${c.t}</h3><div class="pl">${c.p}</div><div class="facts">${c.f.map(x=>`<span>${x}</span>`).join("")}</div>`;
+  const r = el.querySelector("input"), img = el.querySelector(".bimg"), line = el.querySelector(".line"), knob = el.querySelector(".knob");
+  r.oninput = ()=>{ const v=r.value; img.style.clipPath=`inset(0 ${100-v}% 0 0)`; line.style.left=v+"%"; knob.style.left=v+"%"; };
+  cg.appendChild(el);
+});
+
+const burger = document.getElementById("burger");
+burger.onclick = ()=>{
+  const open = document.body.classList.toggle("menu-open");
+  burger.setAttribute("aria-expanded", open);
+};
+document.querySelectorAll("#mainNav a").forEach(a=>a.addEventListener("click",()=>{
+  document.body.classList.remove("menu-open");
+  burger.setAttribute("aria-expanded","false");
+}));
+
+const FAQ=[
+  {q:"Сколько это стоит на самом деле?",a:"Ровно столько, сколько показал калькулятор: ставка × площадь. Цена фиксируется до приезда и не меняется на месте. Если объект сильно запущен — предупредим заранее, а не поставим перед фактом."},
+  {q:"Мне нужно быть дома во время уборки?",a:"Нет. Большинство клиентов передают ключи или код от замка. Сотрудники проверены, имущество застраховано, по завершении — фотоотчёт."},
+  {q:"Своя химия и оборудование?",a:"Да, всё привозим с собой: профессиональные составы безопасных линеек и оборудование, включая парогенератор. Если дома аллергики или животные — используем гипоаллергенную линейку, скажите при заказе."},
+  {q:"Что если мне не понравится результат?",a:"Сначала вы принимаете работу по чек-листу — недочёты устраняются сразу. Если что-то заметили после — 48 часов гарантии: вернёмся и переделаем бесплатно."},
+  {q:"Вы работаете с посуточной арендой?",a:"Да, это отдельное направление: уборка между гостями за 3 часа, фотоотчёт собственнику, абонементы со скидкой. Подробности — в блоке «Для аренды»."}
+];
+const fl = document.getElementById("faqList");
+FAQ.forEach((f,i)=>{
+  const el = document.createElement("div");
+  el.className = "faq-item" + (i===0 ? " open" : "");
+  el.innerHTML = `<button class="faq-q"><span>${f.q}</span><span class="pl">+</span></button><div class="faq-a">${f.a}</div>`;
+  el.querySelector(".faq-q").onclick = ()=>el.classList.toggle("open");
+  fl.appendChild(el);
+});
+</script>
+</body>
+</html>
