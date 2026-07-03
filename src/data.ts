@@ -1,9 +1,9 @@
-export const PHONE = "+7 (988) 123-45-67";
-export const PHONE_HREF = "tel:+79881234567";
-export const WHATSAPP = "https://wa.me/79881234567?text=Здравствуйте!%20Хочу%20рассчитать%20уборку";
-export const EMAIL = "info@vershina-clean.ru";
-export const INSTAGRAM = "@vershina.clean";
-export const ADDRESS = "Сочи, ул. Навагинская, 9";
+export const PHONE = "+7 (922) 453-91-45";
+export const PHONE_HREF = "tel:+79224539145";
+export const WHATSAPP = "https://wa.me/79224539145?text=Здравствуйте!%20Хочу%20рассчитать%20уборку";
+export const WA_LINK = "https://wa.me/79224539145";
+export const TG_LINK = "https://t.me/+79224539145";
+export const MAX_LINK = "#";
 
 export const NAV = [
   { href: "#calc", label: "Цена за 2 минуты" },
@@ -60,7 +60,7 @@ export const TARIFFS: Tariff[] = [
       "Кухня: фасады, фартук, техника снаружи",
       "Мойка и смесители до блеска",
       "Зеркала и стеклянные поверхности",
-      "Санузел: сантехника, плитка, пол",
+      "Санузек: сантехника, плитка, пол",
       "Вынос мусора, замена пакетов",
     ],
   },
