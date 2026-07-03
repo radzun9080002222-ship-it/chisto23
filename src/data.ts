@@ -3,7 +3,7 @@ export const PHONE_HREF = "tel:+79224539145";
 export const WHATSAPP = "https://wa.me/79224539145?text=Здравствуйте!%20Хочу%20рассчитать%20уборку";
 export const WA_LINK = "https://wa.me/79224539145";
 export const TG_LINK = "https://t.me/+79224539145";
-export const MAX_LINK = "#";
+export const MAX_LINK = "https://max.ru/u/f9LHodD0cOIs4YaOfriGUP89QDrCUk7nVsnXecduF7Hd5gQNtOJiTwzxPFQ";
 
 export const NAV = [
   { href: "#calc", label: "Цена за 2 минуты" },
