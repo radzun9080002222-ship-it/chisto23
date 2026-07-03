@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import { ADDRESS, EMAIL, INSTAGRAM, NAV, PHONE, PHONE_HREF } from "../data";
+import { NAV, PHONE, PHONE_HREF } from "../data";
 
 export default function Footer() {
   return (
@@ -16,9 +16,6 @@ export default function Footer() {
         </nav>
         <div className="space-y-2.5 text-sm text-ink/70">
           <a href={PHONE_HREF} className="block font-semibold text-graphite hover:text-emerald">{PHONE}</a>
-          <a href={`mailto:${EMAIL}`} className="block hover:text-emerald">{EMAIL}</a>
-          <a href={`https://instagram.com/${INSTAGRAM.slice(1)}`} target="_blank" rel="noreferrer" className="block hover:text-emerald">{INSTAGRAM}</a>
-          <div className="text-ink/50">{ADDRESS}</div>
         </div>
       </div>
       <div className="border-t border-black/5">
