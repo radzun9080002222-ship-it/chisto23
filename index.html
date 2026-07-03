@@ -178,6 +178,23 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
 .h2{font-size:26px}
 }
 @media(max-width:560px){.proc-grid,.trust-grid{grid-template-columns:1fr}.hero dl{flex-wrap:wrap;gap:24px}}
+.msgr{display:flex;gap:10px;flex-wrap:wrap}
+.msgr-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid rgba(34,39,43,.15);background:#fff;color:var(--gr);font-size:14px;font-weight:600;text-decoration:none;transition:.2s}
+.msgr-btn svg{width:18px;height:18px;fill:var(--gr);transition:.2s}
+.msgr-btn:hover{border-color:var(--em);color:var(--em)}
+.msgr-btn:hover svg{fill:var(--em)}
+.floatbar{position:fixed;left:50%;bottom:22px;transform:translate(-50%,140px);z-index:60;display:flex;gap:8px;background:#fff;border:1px solid rgba(34,39,43,.1);border-radius:999px;padding:8px;box-shadow:0 14px 44px -10px rgba(34,39,43,.32);transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.floatbar.show{transform:translate(-50%,0)}
+.floatbar a{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-size:14px;font-weight:600;text-decoration:none;transition:.2s}
+.floatbar svg{width:18px;height:18px}
+.floatbar .fb-max{background:var(--em);color:#fff}
+.floatbar .fb-max svg{fill:#fff}
+.floatbar .fb-max:hover{background:var(--emd)}
+.floatbar .fb-tel{color:var(--gr)}
+.floatbar .fb-tel svg{fill:var(--gr);transition:.2s}
+.floatbar .fb-tel:hover{color:var(--em)}
+.floatbar .fb-tel:hover svg{fill:var(--em)}
+@media(max-width:560px){.floatbar{left:14px;right:14px;bottom:14px;transform:translateY(140px)}.floatbar.show{transform:translateY(0)}.floatbar a{flex:1;justify-content:center;padding:13px 12px}}
 </style>
 </head>
 <body id="top">
@@ -192,10 +209,10 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
     <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav id="mainNav">
       <a href="#calc">Цена за 2 минуты</a><a href="#services">Услуги</a><a href="#cases">Результаты</a><a href="#standard">Стандарт</a><a href="#rent">Для аренды</a><a href="#faq">Вопросы</a>
-      <a class="m-cta" href="tel:+79881234567">+7 (988) 123-45-67</a>
+      <a class="m-cta" href="tel:+79224539145">+7 (922) 453-91-45</a>
     </nav>
     <div class="hdr-right" style="display:flex;align-items:center;gap:18px">
-      <a class="ghost" href="tel:+79881234567">+7 (988) 123-45-67</a>
+      <a class="ghost" href="tel:+79224539145">+7 (922) 453-91-45</a>
       <a class="hdr-cta" href="#calc">Рассчитать цену</a>
     </div>
   </div>
@@ -212,7 +229,11 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
       <p class="lead">Премиальный клининг квартир и домов в Сочи. Точная цена за 2 минуты — до приезда, а не после.</p>
       <div style="display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;align-items:center">
         <a class="btn" href="#calc">Узнать свою цену ↓</a>
-        <a class="ghost" href="https://wa.me/79881234567" target="_blank">Написать в WhatsApp</a>
+      </div>
+      <div class="msgr" style="margin-top:20px">
+        <a class="msgr-btn" href="https://wa.me/79224539145" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.7.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 6.5 9c0 1.7 1.2 3.3 1.4 3.5s2.4 3.7 5.8 5c2.2.8 2.2.5 2.6.5s1.4-.6 1.6-1.1.2-1 .1-1.1-.2-.2-.4-.3Z"/></svg>WhatsApp</a>
+        <a class="msgr-btn" href="https://t.me/+79224539145" target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6 12.6l-4.7-1.5c-1-.3-1-.9.2-1.4l18.4-7c.8-.3 1.5.2 1.2 1.6Z"/></svg>Telegram</a>
+        <a class="msgr-btn" href="#" aria-label="MAX"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.3 4.7 3.5 6.2-.2 1-.7 2.2-1.4 3.1-.2.3.1.6.4.5 1.9-.3 3.3-.9 4.4-1.6 1 .2 2 .3 3.1.3 5.5 0 10-3.6 10-8s-4.5-8-10-8Z"/></svg>MAX</a>
       </div>
       <dl>
         <div><dt>47</dt><dd>пунктов чек-листа приёмки</dd></div>
@@ -258,7 +279,7 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
         <div class="l" id="priceLabel">Стоимость · 5–8 часов</div>
         <div class="p" id="priceOut">15 000 ₽</div>
       </div>
-      <a class="btn" id="bookBtn" href="https://wa.me/79881234567" target="_blank">Забронировать слот →</a>
+      <a class="btn" id="bookBtn" href="https://wa.me/79224539145" target="_blank">Забронировать слот →</a>
       <p class="calc-fine">Бронь в WhatsApp за 2 минуты. Оплата — после приёмки работы.</p>
     </div>
   </div>
@@ -319,7 +340,7 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
         <div class="kicker">Для посуточной аренды и арендодателей</div>
         <h2 class="h2">Ваши квартиры зарабатывают.<small>Чистоту мы берём на себя.</small></h2>
       </div>
-      <a class="btn" href="https://wa.me/79881234567" target="_blank">Обсудить объекты →</a>
+      <a class="btn" href="https://wa.me/79224539145" target="_blank">Обсудить объекты →</a>
     </div>
     <div class="rent-grid">
       <div class="rent-card"><div class="ic">◷</div><h3>Слот за 3 часа</h3><p>Уборка между выездом и заездом гостей — без срыва брони.</p></div>
@@ -344,10 +365,14 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
   <div class="cx">
     <h2>Чистота, в которую<br>приятно возвращаться.</h2>
     <div class="row">
-      <a class="btn" href="https://wa.me/79881234567" target="_blank">Написать в WhatsApp</a>
+      <a class="btn" href="https://wa.me/79224539145" target="_blank">Написать в WhatsApp</a>
       <a class="alt" href="#calc">Рассчитать цену</a>
     </div>
-    <a class="ph" href="tel:+79881234567">или по телефону: +7 (988) 123-45-67</a>
+    <div class="msgr" style="justify-content:center;margin-top:20px;position:relative">
+      <a class="msgr-btn" href="https://t.me/+79224539145" target="_blank" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6 12.6l-4.7-1.5c-1-.3-1-.9.2-1.4l18.4-7c.8-.3 1.5.2 1.2 1.6Z"/></svg>Telegram</a>
+      <a class="msgr-btn" href="#" aria-label="MAX"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.3 4.7 3.5 6.2-.2 1-.7 2.2-1.4 3.1-.2.3.1.6.4.5 1.9-.3 3.3-.9 4.4-1.6 1 .2 2 .3 3.1.3 5.5 0 10-3.6 10-8s-4.5-8-10-8Z"/></svg>MAX</a>
+    </div>
+    <a class="ph" href="tel:+79224539145">или по телефону: +7 (922) 453-91-45</a>
   </div>
 </section>
 
@@ -365,14 +390,16 @@ nav .m-cta{display:block;margin-top:18px;background:var(--em);color:#fff;text-al
       <a href="#calc">Цена за 2 минуты</a><a href="#services">Услуги</a><a href="#cases">Результаты</a><a href="#standard">Стандарт</a><a href="#rent">Для аренды</a><a href="#faq">Вопросы</a>
     </div>
     <div class="f-ct">
-      <a class="tel" href="tel:+79881234567">+7 (988) 123-45-67</a><br>
-      <a href="mailto:info@vershina-clean.ru">info@vershina-clean.ru</a><br>
-      <a href="https://instagram.com/vershina.clean" target="_blank">@vershina.clean</a><br>
-      Сочи, ул. Навагинская, 9
+      <a class="tel" href="tel:+79224539145">+7 (922) 453-91-45</a>
     </div>
   </div>
   <div class="cx copy"><span>© 2026 Вершина. Профессиональный клининг.</span><a href="#" style="color:inherit;text-decoration:none">Политика конфиденциальности</a></div>
 </footer>
+
+<div class="floatbar" id="floatbar">
+  <a class="fb-max" href="#" aria-label="MAX"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.3 4.7 3.5 6.2-.2 1-.7 2.2-1.4 3.1-.2.3.1.6.4.5 1.9-.3 3.3-.9 4.4-1.6 1 .2 2 .3 3.1.3 5.5 0 10-3.6 10-8s-4.5-8-10-8Z"/></svg>MAX</a>
+  <a class="fb-tel" href="tel:+79224539145" aria-label="Позвонить"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.4.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>Позвонить</a>
+</div>
 
 <script>
 const TARIFFS = {
@@ -388,7 +415,7 @@ function recalc(){
   const lbl = document.getElementById("priceLabel"), out = document.getElementById("priceOut");
   if(t.rate){ lbl.textContent = "Стоимость · " + t.dur; out.textContent = fmt(Math.max(t.rate*a, t.min)) + " ₽"; }
   else { lbl.textContent = "Под ключ считаем индивидуально"; out.textContent = "Точная смета за 15 минут"; }
-  document.getElementById("bookBtn").href = "https://wa.me/79881234567?text=" + encodeURIComponent("Здравствуйте! Хочу забронировать: " + t.name + ", " + a + " м²");
+  document.getElementById("bookBtn").href = "https://wa.me/79224539145?text=" + encodeURIComponent("Здравствуйте! Хочу забронировать: " + t.name + ", " + a + " м²");
 }
 document.querySelectorAll(".tbtn").forEach(b=>b.onclick=()=>{
   document.querySelectorAll(".tbtn").forEach(x=>x.classList.remove("on"));
@@ -446,6 +473,8 @@ FAQ.forEach((f,i)=>{
   el.querySelector(".faq-q").onclick = ()=>el.classList.toggle("open");
   fl.appendChild(el);
 });
+const fb=document.getElementById("floatbar");
+if(fb){window.addEventListener("scroll",function(){ if(window.scrollY>560){fb.classList.add("show");}else{fb.classList.remove("show");} },{passive:true});}
 </script>
 </body>
 </html>
