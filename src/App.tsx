@@ -10,6 +10,7 @@ import Rent from "./components/Rent";
 import Faq from "./components/Faq";
 import FinalCta from "./components/FinalCta";
 import Footer from "./components/Footer";
+import FloatBar from "./components/FloatBar";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <FinalCta />
       </main>
       <Footer />
+      <FloatBar />
     </>
   );
 }
