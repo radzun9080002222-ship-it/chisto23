@@ -1,4 +1,5 @@
 import { PHONE, PHONE_HREF, WHATSAPP } from "../data";
+import Messengers from "./Messengers";
 
 export default function FinalCta() {
   return (
@@ -19,6 +20,7 @@ export default function FinalCta() {
           <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-primary">Написать в WhatsApp</a>
           <a href="#calc" className="rounded-full border border-graphite/25 px-7 py-3.5 text-sm font-semibold text-graphite transition hover:border-emerald hover:text-emerald">Рассчитать цену</a>
         </div>
+        <Messengers className="mt-6 justify-center" items={["tg", "max"]} />
         <a href={PHONE_HREF} className="mt-6 block text-sm font-semibold text-ink/60 hover:text-emerald">или по телефону: {PHONE}</a>
       </div>
     </section>
