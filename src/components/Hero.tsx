@@ -1,5 +1,5 @@
 import { ArrowDown } from "lucide-react";
-import { WHATSAPP } from "../data";
+import Messengers from "./Messengers";
 
 export default function Hero() {
   return (
@@ -17,12 +17,12 @@ export default function Hero() {
             Премиальный клининг квартир и домов в Сочи.
             Точная цена за 2 минуты — до приезда, а не после.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9">
             <a href="#calc" className="btn-primary">
               Узнать свою цену <ArrowDown size={16} />
             </a>
-            <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-ghost">Написать в WhatsApp</a>
           </div>
+          <Messengers className="mt-5" />
           <dl className="mt-12 flex gap-10 border-t border-black/5 pt-7">
             <div>
               <dt className="text-2xl font-bold text-graphite">47</dt>
