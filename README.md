@@ -7,15 +7,16 @@
 
 ## Запуск
 ```bash
-npm install
-npm run dev      # разработка
-npm run build    # сборка в dist/
+pnpm install
+pnpm run dev      # разработка
+pnpm run build    # сборка в dist/
 ```
 
 ## Где что лежит
 - `src/data.ts` — ВЕСЬ контент: телефоны, WhatsApp, тарифы, ставки ₽/м², чек-листы, кейсы, FAQ
 - `src/components/` — секции в порядке страницы (см. App.tsx)
 - `public/images/` — изображения (сейчас плейсхолдеры, план замены в ASSETS.md)
+- `source-assets/images/GPT/` — исходные GPT-генерации, не попадают в production build
 - `preview.html` — статичное превью без сборки (открыть двойным кликом), в прод не брать
 
 ## Не забыть

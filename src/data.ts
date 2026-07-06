@@ -2,7 +2,7 @@ export const PHONE = "+7 (922) 453-91-45";
 export const PHONE_HREF = "tel:+79224539145";
 export const WHATSAPP = "https://wa.me/79224539145?text=Здравствуйте!%20Хочу%20рассчитать%20уборку";
 export const WA_LINK = "https://wa.me/79224539145";
-export const TG_LINK = "https://t.me/+79224539145";
+export const TG_LINK = "tg://resolve?phone=79224539145";
 export const MAX_LINK = "https://max.ru/u/f9LHodD0cOIs4YaOfriGUP89QDrCUk7nVsnXecduF7Hd5gQNtOJiTwzxPFQ";
 
 export const NAV = [
@@ -60,7 +60,6 @@ export const TARIFFS: Tariff[] = [
       "Санузел: сантехника, плитка, пол",
       "Мойка и смесители до блеска",
       "Зеркала и стеклянные поверхности",
-      "Санузел: сантехника, плитка, пол",
       "Вынос мусора, замена пакетов",
     ],
   },
