@@ -23,11 +23,11 @@ export default function Hero() {
       <div className="container-x grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <div className="mb-4 flex items-center gap-3">
-            <span className="text-sm font-bold uppercase tracking-widest2 text-emerald">Вершина</span>
+            <span className="text-base font-bold uppercase tracking-widest2 text-emerald">Вершина</span>
             <span className="h-px w-11 bg-emerald/40" />
           </div>
           <h1 className="text-[17vw] font-bold leading-[0.95] tracking-tight text-graphite md:text-[120px]">
-            Чисто<span className="text-emerald">.</span>
+            Будет<br />чисто<span className="text-emerald">.</span>
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70 md:text-xl">
             Премиальный клининг квартир и домов в Сочи.
