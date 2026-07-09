@@ -18,41 +18,21 @@ export default function Hero() {
   const [area, setArea] = useState<number | null>(null);
   useEffect(() => setArea(computeArea()), []);
 
-  // ВРЕМЕННО: превью вариантов заголовка через хэш (#v1 / #v3 / #v7). Убрать после выбора.
-  const [variant, setVariant] = useState("v1");
-  useEffect(() => {
-    const read = () => {
-      const h = window.location.hash.replace("#", "");
-      if (h === "v1" || h === "v3" || h === "v7") setVariant(h);
-    };
-    read();
-    window.addEventListener("hashchange", read);
-    return () => window.removeEventListener("hashchange", read);
-  }, []);
-  const showKicker = variant !== "v3";
-
   return (
     <section id="top" className="relative overflow-hidden bg-white pt-[72px]">
       <div className="container-x grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.1fr_1fr]">
         <div>
-          {showKicker && (
-            <div className="mb-4 flex items-center gap-3">
-              <span className="text-base font-bold uppercase tracking-widest2 text-emerald">Вершина</span>
-              <span className="h-px w-11 bg-emerald/40" />
-            </div>
-          )}
-
-          {variant === "v7" ? (
-            <span className="mb-3 inline-block rounded-full bg-emerald px-4 py-1 text-sm font-semibold text-white md:text-base">будет</span>
-          ) : (
-            <span
-              className="block leading-[0.8] text-emerald text-[13vw] md:text-[72px]"
-              style={{ fontFamily: "'Caveat', cursive" }}
-            >
-              будет
-            </span>
-          )}
-
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-px w-8 bg-emerald/40" />
+            <span className="text-base font-bold uppercase tracking-widest2 text-emerald">Вершина</span>
+            <span className="h-px w-8 bg-emerald/40" />
+          </div>
+          <span
+            className="block leading-[0.8] text-emerald text-[13vw] md:text-[72px]"
+            style={{ fontFamily: "'Caveat', cursive" }}
+          >
+            будет
+          </span>
           <h1 className="text-[17vw] font-bold leading-[0.95] tracking-tight text-graphite md:text-[120px]">
             Чисто<span className="text-emerald">.</span>
           </h1>
