@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { TARIFFS, WHATSAPP } from "../data";
+import { TARIFFS, MAX_LINK } from "../data";
 
 const fmt = (n: number) => n.toLocaleString("ru-RU");
 
@@ -10,7 +10,6 @@ export default function Calculator() {
   const tariff = TARIFFS.find((t) => t.id === tariffId)!;
   const price = tariff.rate ? Math.max(tariff.rate * area, tariff.minPrice) : null;
 
-  const waLink = `${WHATSAPP}%20—%20${encodeURIComponent(`${tariff.name}, ${area} м²`)}`;
 
   return (
     <section id="calc" className="bg-graphite py-20 text-white md:py-28">
@@ -73,7 +72,7 @@ export default function Calculator() {
               </>
             )}
             <a
-              href={waLink}
+              href={MAX_LINK}
               target="_blank"
               rel="noreferrer"
               className="btn-primary mt-6 w-full justify-center"
@@ -81,7 +80,7 @@ export default function Calculator() {
               Забронировать слот <ArrowRight size={16} />
             </a>
             <p className="mt-4 text-center text-[11px] text-white/40">
-              Бронь в WhatsApp за 2 минуты. Оплата — после приёмки работы.
+              Бронь в MAX за 2 минуты. Оплата — после приёмки работы.
             </p>
           </div>
         </div>

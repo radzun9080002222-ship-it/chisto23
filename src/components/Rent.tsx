@@ -1,5 +1,5 @@
 import { ArrowRight, Camera, Clock4, RotateCcw } from "lucide-react";
-import { WHATSAPP } from "../data";
+import { MAX_LINK } from "../data";
 
 const POINTS = [
   { icon: Clock4, title: "Слот за 3 часа", text: "Уборка между выездом и заездом гостей — без срыва брони." },
@@ -20,7 +20,7 @@ export default function Rent() {
               <span className="text-white/50">Чистоту мы берём на себя.</span>
             </h2>
           </div>
-          <a href={WHATSAPP} target="_blank" rel="noreferrer" className="btn-primary self-start lg:self-end">
+          <a href={MAX_LINK} target="_blank" rel="noreferrer" className="btn-primary self-start lg:self-end">
             Обсудить объекты <ArrowRight size={16} />
           </a>
         </div>

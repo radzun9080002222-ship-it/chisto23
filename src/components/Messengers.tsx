@@ -7,17 +7,17 @@ const icon = "h-[18px] w-[18px] fill-current";
 
 type Props = { className?: string; items?: ("wa" | "tg" | "max")[] };
 
-export default function Messengers({ className = "", items = ["wa", "tg", "max"] }: Props) {
+export default function Messengers({ className = "", items = ["max", "tg", "wa"] }: Props) {
   return (
     <div className={`flex flex-wrap gap-2.5 ${className}`}>
-      {items.includes("wa") && (
-        <a href={WA_LINK} target="_blank" rel="noreferrer" aria-label="WhatsApp" className={cls}><WaIcon className={icon} />WhatsApp</a>
+      {items.includes("max") && (
+        <a href={MAX_LINK} target="_blank" rel="noreferrer" aria-label="MAX" className={cls}><MaxIcon className={icon} />MAX</a>
       )}
       {items.includes("tg") && (
         <a href={TG_LINK} target="_blank" rel="noreferrer" aria-label="Telegram" className={cls}><TgIcon className={icon} />Telegram</a>
       )}
-      {items.includes("max") && (
-        <a href={MAX_LINK} aria-label="MAX" className={cls}><MaxIcon className={icon} />MAX</a>
+      {items.includes("wa") && (
+        <a href={WA_LINK} target="_blank" rel="noreferrer" aria-label="WhatsApp" className={cls}><WaIcon className={icon} />WhatsApp</a>
       )}
     </div>
   );
