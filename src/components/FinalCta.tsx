@@ -10,6 +10,8 @@ export default function FinalCta() {
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 right-0 h-full opacity-80"
         style={{ maskImage: "linear-gradient(to left, black 35%, transparent)", WebkitMaskImage: "linear-gradient(to left, black 35%, transparent)" }}
+        loading="lazy"
+        decoding="async"
       />
       <div className="container-x relative text-center">
         <h2 className="mx-auto max-w-2xl text-3xl font-semibold leading-snug text-graphite md:text-5xl">
