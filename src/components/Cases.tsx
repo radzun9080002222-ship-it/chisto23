@@ -5,12 +5,14 @@ function BeforeAfter({ before, after, alt }: { before: string; after: string; al
   const [pos, setPos] = useState(50);
   return (
     <div className="relative aspect-[4/3] w-full select-none overflow-hidden rounded-2xl">
-      <img src={after} alt={`${alt} — после`} className="absolute inset-0 h-full w-full object-cover" />
+      <img src={after} alt={`${alt} — после`} className="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
       <img
         src={before}
         alt={`${alt} — до`}
         className="absolute inset-0 h-full w-full object-cover"
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+        loading="lazy"
+        decoding="async"
       />
       <div className="absolute inset-y-0 w-0.5 bg-white" style={{ left: `${pos}%` }} />
       <div
