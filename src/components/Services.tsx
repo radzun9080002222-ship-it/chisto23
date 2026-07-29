@@ -11,7 +11,7 @@ export default function Services() {
     <section id="services" className="bg-white py-20 md:py-28">
       <div className="container-x">
         <div className="kicker">Услуги</div>
-        <h2 className="mt-3 text-3xl font-semibold text-graphite md:text-4xl">Три уровня. Один стандарт.</h2>
+        <h2 className="mt-3 text-3xl font-semibold text-graphite md:text-4xl">Четыре уровня. Один стандарт.</h2>
         <p className="mt-4 max-w-lg text-sm leading-7 text-ink/60">
           Каждая услуга — это конкретный список работ, который вы видите до заказа
           и по которому принимаете результат.
@@ -32,7 +32,11 @@ export default function Services() {
                     <span className="mt-1 block text-sm text-ink/55">{t.tagline}</span>
                   </span>
                   <span className="hidden text-right text-lg font-bold text-graphite md:block">
-                    {t.rate ? `от ${t.rate} ₽/м²` : "индивидуально"}
+                    {t.rate
+                      ? `от ${t.rate} ₽/м²`
+                      : t.rateOptions
+                        ? `от ${Math.min(...t.rateOptions.map((option) => option.rate))} ₽/м²`
+                        : "индивидуально"}
                     <span className="block text-xs font-normal text-ink/45">мин. заказ {t.minPrice ? `${fmt(t.minPrice)} ₽` : "—"}</span>
                   </span>
                   <ChevronDown className={`justify-self-end text-ink/40 transition ${open ? "rotate-180" : ""}`} size={20} />
@@ -53,7 +57,7 @@ export default function Services() {
         </div>
 
         <p className="mt-6 text-xs text-ink/45">
-          Отдельно: химчистка мебели и ковров, мойка окон, уборка после ремонта, офисы. Цена — по запросу.
+          Отдельно: химчистка мебели и ковров, офисы. Цена — по запросу.
         </p>
       </div>
     </section>

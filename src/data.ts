@@ -37,6 +37,11 @@ export type Tariff = {
   n: string;
   name: string;
   rate: number | null;
+  rateOptions?: {
+    id: string;
+    name: string;
+    rate: number;
+  }[];
   minPrice: number;
   tagline: string;
   duration: string;
@@ -48,8 +53,8 @@ export const TARIFFS: Tariff[] = [
     id: "regular",
     n: "01",
     name: "Влажная уборка",
-    rate: 110,
-    minPrice: 4500,
+    rate: 160,
+    minPrice: 6000,
     tagline: "Дом снова дышит. Идеально для поддержания порядка раз в 1–2 недели.",
     duration: "2–4 часа",
     checklist: [
@@ -85,10 +90,31 @@ export const TARIFFS: Tariff[] = [
     ],
   },
   {
-    id: "turnkey",
+    id: "after-renovation",
     n: "03",
+    name: "После ремонта",
+    rate: 300,
+    minPrice: 0,
+    tagline: "Чистый старт после строительных работ. Убираем пыль, следы смесей и мелкий мусор.",
+    duration: "1–2 дня",
+    checklist: [
+      "Удаление строительной пыли со всех поверхностей",
+      "Влажная уборка полов, стен, дверей и плинтусов",
+      "Удаление следов строительных смесей",
+      "Глубокая очистка кухни и санузлов",
+      "Обеспыливание мебели, радиаторов и светильников",
+      "Финишная детализация каждой комнаты",
+    ],
+  },
+  {
+    id: "turnkey",
+    n: "04",
     name: "Под ключ",
     rate: null,
+    rateOptions: [
+      { id: "standard", name: "Стандартные окна", rate: 450 },
+      { id: "panoramic", name: "Панорамные окна", rate: 550 },
+    ],
     minPrice: 0,
     tagline: "Максимум. Для новоселья, после ремонта или когда нужен вау-эффект.",
     duration: "1–2 дня",
