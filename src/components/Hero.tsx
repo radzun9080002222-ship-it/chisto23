@@ -27,15 +27,15 @@ export default function Hero() {
             <span className="text-base font-bold uppercase tracking-widest2 text-emerald">Вершина</span>
             <span className="h-px w-8 bg-emerald/40" />
           </div>
-          <span
-            className="block leading-[0.8] text-emerald text-[13vw] md:text-[72px]"
-            style={{ fontFamily: "'Caveat', cursive" }}
-          >
-            будет
-          </span>
           <h1 className="text-[17vw] font-bold leading-[0.95] tracking-tight text-graphite md:text-[120px]">
             Чисто<span className="text-emerald">.</span>
           </h1>
+          <span
+            className="mt-1 block leading-[0.8] text-emerald text-[13vw] md:text-[66px]"
+            style={{ fontFamily: "'Caveat', cursive" }}
+          >
+            в Сочи
+          </span>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-ink/70 md:text-xl">
             Премиальный клининг квартир и домов в Сочи.
             Точная цена за 2 минуты — до приезда, а не после.
