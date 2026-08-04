@@ -6,15 +6,12 @@ const fmt = (n: number) => n.toLocaleString("ru-RU");
 
 export default function Calculator() {
   const [area, setArea] = useState(60);
-  const [windowArea, setWindowArea] = useState(10);
   const [tariffId, setTariffId] = useState("general");
   const [rateOptionId, setRateOptionId] = useState("standard");
   const tariff = TARIFFS.find((t) => t.id === tariffId)!;
-  const isWindowCalculation = tariff.id === "turnkey";
   const rateOption = tariff.rateOptions?.find((option) => option.id === rateOptionId);
   const rate = tariff.rate ?? rateOption?.rate ?? null;
-  const calculationArea = isWindowCalculation ? windowArea : area;
-  const price = rate ? Math.max(rate * calculationArea, tariff.minPrice) : null;
+  const price = rate ? Math.max(rate * area, tariff.minPrice) : null;
 
   return (
     <section id="calc" className="bg-graphite py-20 text-white md:py-28">
@@ -74,25 +71,18 @@ export default function Calculator() {
           <div className="mt-8">
             <div className="flex items-baseline justify-between">
               <label htmlFor="area" className="text-sm text-white/60">
-                {isWindowCalculation ? "Площадь остекления" : "Площадь помещения"}
+                Площадь помещения
               </label>
-              <span className="text-xl font-bold">{calculationArea} м²</span>
+              <span className="text-xl font-bold">{area} м²</span>
             </div>
             <input
               id="area"
               type="range"
-              min={isWindowCalculation ? 1 : 25}
-              max={isWindowCalculation ? 100 : 250}
-              step={isWindowCalculation ? 1 : 5}
-              value={calculationArea}
-              onChange={(e) => {
-                const value = Number(e.target.value);
-                if (isWindowCalculation) {
-                  setWindowArea(value);
-                } else {
-                  setArea(value);
-                }
-              }}
+              min={25}
+              max={250}
+              step={5}
+              value={area}
+              onChange={(e) => setArea(Number(e.target.value))}
               className="mt-3 w-full accent-emerald"
             />
           </div>

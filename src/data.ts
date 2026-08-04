@@ -94,7 +94,7 @@ export const TARIFFS: Tariff[] = [
     n: "03",
     name: "После ремонта",
     rate: 300,
-    minPrice: 0,
+    minPrice: 12000,
     tagline: "Чистый старт после строительных работ. Убираем пыль, следы смесей и мелкий мусор.",
     duration: "1–2 дня",
     checklist: [
@@ -115,7 +115,7 @@ export const TARIFFS: Tariff[] = [
       { id: "standard", name: "Стандартные окна", rate: 450 },
       { id: "panoramic", name: "Панорамные окна", rate: 550 },
     ],
-    minPrice: 0,
+    minPrice: 12000,
     tagline: "Максимум. Для новоселья, после ремонта или когда нужен вау-эффект.",
     duration: "1–2 дня",
     checklist: [
